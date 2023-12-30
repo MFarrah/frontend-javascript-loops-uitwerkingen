@@ -16,6 +16,9 @@ const scores = [
 // 66
 // ==========================================
 
+for (let i = 0; i < scores.length; i++){
+    console.log(scores[i].score)
+}
 
 
 
