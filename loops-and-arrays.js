@@ -3,7 +3,6 @@
 // Schrijf een script dat iedere naam in onderstaande array vervangt door een koosnaampje, door er -"je" achter te plakken.
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 namen zou bevatten!
 // ==========================================
-
 const names = ["Henk", "Piet", "Fred", "Joop"];
 
 // Verwachtte uitkomsten:
@@ -11,9 +10,9 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // console.log(names) geeft: ["Henk", "Piet", "Fred", "Joop"]
 // Na jouw script zie je de aangepaste waardes:
 // console.log(names) geeft: ["Henkje", "Pietje", "Fredje", "Joopje"]
-
-
-
+for (let i = 0; i < names.length; i++)
+    names[i] = names[i] + "je";
+console.log(names);
 
 
 // ==========================================
@@ -21,7 +20,6 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // Schrijf een script dat ieder EVEN getal in onderstaande array met 2 vermenigvuldigd, en ieder ONEVEN getal met 3
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
-
 const numbers = [2, 4, 5, 29, 38];
 
 // Verwachtte uitkomsten:
@@ -29,9 +27,14 @@ const numbers = [2, 4, 5, 29, 38];
 // console.log(numbers) geeft: [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(numbers) geeft: [ 4, 8, 15, 87, 76 ];
-
-
-
+for (i = 0; i < numbers.length; i++)
+    if (numbers[i] % 2 === 0) {
+        numbers[i] = numbers[i] * 2;
+    }
+else if (numbers[i] % 2 !== 0) {
+    numbers[i] = numbers[i] * 3;
+}
+console.log(numbers);
 
 
 // ==========================================
@@ -41,7 +44,6 @@ const numbers = [2, 4, 5, 29, 38];
 // Vervolgens moet de huidige waarde in de array overschreven worden met: "Het volume van [a] is [b]"
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
-
 const squares = [30, 2, 8, 24, 11];
 
 // Verwachtte uitkomsten:
@@ -56,6 +58,9 @@ const squares = [30, 2, 8, 24, 11];
 //   'Het volume van 24 is 13824',
 //   'Het volume van 11 is 1331'
 // ]
-
-
+for (let i = 0; i < squares.length; i++){
+ const volume = squares[i] * squares[i] * squares[i];
+squares[i] = "Het volume van " + squares[i] + " is " + volume;
+}
+console.log(squares);
 
